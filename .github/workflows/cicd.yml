@@ -56,9 +56,5 @@ jobs:
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
-        with:
-          projectBaseDir: .
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-         
+        run: mvn sonar:sonar -Dsonar.login=ee767cafbc91d8aff2b0efa0a6c4c7798bec3489
 
