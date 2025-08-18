@@ -16,7 +16,7 @@
 
     <build>
         <plugins>
-            <!-- ✅ Sonar Maven Plugin -->
+        
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
