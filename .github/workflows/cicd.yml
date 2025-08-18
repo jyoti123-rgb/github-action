@@ -57,8 +57,10 @@ jobs:
       - name: SonarCloud Scan
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B verify sonar:sonar \
-          -Dsonar.projectKey=jyoti123-rgb_github-action \        
-          -Dsonar.organization=iam-jyoti \      
-          -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.login=${SONAR_TOKEN}
+          run: |
+                mvn -B verify sonar:sonar \
+                  -Dsonar.projectKey=jyoti123-rgb_github-action \
+                  -Dsonar.organization=iam-jyoti \
+                  -Dsonar.host.url=https://sonarcloud.io \
+                  -Dsonar.login=${SONAR_TOKEN}
+        
